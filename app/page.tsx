@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { getEquipmentData } from "@/lib/api";
 import { EquipmentData } from "@/types/equipments";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
 
 const Dashboard: React.FC = () => {
     const [data, setData] = useState<EquipmentData | null>(null);
