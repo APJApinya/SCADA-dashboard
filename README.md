@@ -1,4 +1,4 @@
-# 🚀 Remote Equipment Monitoring System (Cloud-Integrated SCADA)
+# 🚀 Cloud-Based Industrial IoT (IIoT) Monitoring System with AWS
 **Try the Live Demo Here** 👉 [https://main.da3mnmg18wb1q.amplifyapp.com/](https://main.da3mnmg18wb1q.amplifyapp.com/)
 
 
@@ -7,9 +7,19 @@ The Remote Equipment Monitoring System is a cloud-integrated SCADA (Supervisory 
 This project demonstrates the integration of **AWS IoT Core, DynamoDB, API Gateway, Lambda, EventBridge, and SNS** to collect, process, and visualize equipment data.
 
 This project showcases:
-- **AWS-based Industrial IoT (IIoT) monitoring** for real-time equipment status tracking.
-- **Serverless architecture** to optimize scalability and cost efficiency.
-- **Data-driven alert system** using AWS SNS for proactive notifications.
+- **Cloud-based industrial monitoring** with AWS IoT Core and MQTT.
+- **A serverless architecture** using AWS Lambda, DynamoDB, and API Gateway.
+- **A real-time dashboard** built with Next.js and Tailwind CSS.
+- **Automated alerting** via AWS SNS for abnormal equipment conditions.
+---
+## Live Demo
+[Try the Web Dashboard](https://main.da3mnmg18wb1q.amplifyapp.com/)
+
+**Features you can test:**
+- View real-time sensor data (temperature, pressure, humidity).
+- Start/Stop simulated sensor data generation.
+- Receive warnings when **temperature exceeds 80°C**.
+
 ---
 ## Tech Stack & AWS Services Used
 **Frontend**:
@@ -18,40 +28,40 @@ This project showcases:
 - **React Hooks** - For state and data fetching logic.
 
 **Backend**:
-- **AWS IoT Core** - Secure and scalable MQTT-based data transmission.
+- **AWS IoT Core** - Handles MQTT-based data transmission from sensors.
 - **AWS Lambda** - Serverless backend functions for data processing.
 - **AWS DynamoDB** - NoSQL database for storing historical equipment data.
 - **AWS API Gateway** - Secure REST API for frontend-backend communication.
 - **AWS SNS** - Sends email alerts for critical equipment issues.
 - **AWS EventBridge** - Triggers automated data generation every minute.
+- 
 ---
 ## Features
-- **Real-Time Equipment Monitoring**:
-  - Retrieves and displays live sensor data (temperature, pressure, humidity). (lambda function used to demonstrate instead of actual sensors)
-  - Uses AWS IoT Core to publish sensor data to the cloud.
-- **Web Dashboard for Data Visualization**:
-  - Built using Next.js + Tailwind CSS for a clean and responsive UI.
-  - Displays equipment data dynamically using an auto-refresh feature.
-- **Automated Data Storage & Retrieval**:
-  - Stores sensor data in AWS DynamoDB.
-  - Uses Lambda functions to fetch and return the latest data via API Gateway.
-- **Alert & Notification System**:
-  - Triggers alerts when temperature exceeds 80°C.
-  - Sends email notifications using AWS SNS.
-- **Scheduled Data Generation (Testing Mode)**:
-  - Uses AWS EventBridge to trigger a Lambda function every minute.
-  - Simulates real-time sensor data in AWS IoT Core.
-- **Start/Stop Equipment Simulation**:
-  - Users can start/stop simulated sensor data generation via the web dashboard for testing purpose.
-  - Uses API Gateway & Lambda to dynamically enable/disable EventBridge rules.
+**Real-Time Equipment Monitoring**:  
+- Uses **AWS IoT Core + MQTT** to collect and send live sensor data.
+
+**Cloud-Based Data Storage & Retrieval**:  
+- Data is stored in **AWS DynamoDB** and accessed via API Gateway.
+
+**Interactive Web Dashboard**:  
+- Displays sensor data dynamically using a **Next.js frontend**.
+
+**Alert System for Critical Conditions**:  
+- **AWS SNS sends alerts** when temperature exceeds 80°C.
+
+**Automated Data Simulation**:  
+- Uses **AWS EventBridge** to trigger **Lambda-based data generation**.
 ---
 ## Architecture Overview
 ![AWS Architecture Diagram](./SCADA-dashboard.drawio.png)
+
+---
+## Challenges and Learnings
+- **Efficiently processing real-time IoT data streams** with AWS Lambda.
+- **Building a cloud-native alternative to SCADA** for remote monitoring.
+- **Optimizing data storage and retrieval** with DynamoDB indexes.
 ---
 ## Future Improvements
-- Security Practice
-  - Implemented AWS Cognito authentication
-- Machine Learning for Predictive Maintenance
-  - Integrate AI/ML models to predict equipment failures before they occur.
-- Mobile App for Equipment Monitoring
-  - Extend the monitoring dashboard to React Native for mobile users.
+- **Predictive Maintenance with Machine Learning** 
+- **Mobile App Integration** 
+- **Integration with Industrial Protocols (OPC UA, Modbus) and with Ignition** 
