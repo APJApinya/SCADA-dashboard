@@ -16,6 +16,7 @@ This project showcases:
 - **Next.js (TypeScript)** - Web dashboard for real-time data visualization.
 - **Tailwind CSS** - Modern UI styling.
 - **React Hooks** - For state and data fetching logic.
+
 **Backend**:
 - **AWS IoT Core** - Secure and scalable MQTT-based data transmission.
 - **AWS Lambda** - Serverless backend functions for data processing.
