@@ -1,8 +1,9 @@
-"use client"; // Enables Client Component behavior in the App Router
+"use client"; // Enables Client Component to use useState and useEffect
 
 import { useState, useEffect } from "react";
 import { getEquipmentData } from "@/lib/api";
 import { EquipmentData } from "@/types/equipments";
+import StartStopButtons from "@/components/StartStopButtons";
 
 const Dashboard: React.FC = () => {
     const [data, setData] = useState<EquipmentData | null>(null);
@@ -24,6 +25,7 @@ const Dashboard: React.FC = () => {
     return (
         <div style={{ padding: "20px" }}>
         <h1>Remote Equipment Monitoring</h1>
+        <StartStopButtons /> 
         <p><strong>Machine ID:</strong> {data.machine_id}</p>
         <p><strong>Temperature:</strong> {data.temperature} °C</p>
         <p><strong>Pressure:</strong> {data.pressure} Pa</p>
